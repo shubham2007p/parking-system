@@ -1,0 +1,60 @@
+
+CREATE TABLE parking_inventory (
+  slot_no int NOT NULL PRIMARY KEY,
+  pillar_no int NULL,
+  size varchar(20) NULL,
+  availability tinyint(1) NULL
+) 
+
+-----------data of parking inventory-----------
+
+INSERT INTO parking_inventory (slot_no, pillar_no, size, availability)
+VALUES
+  (1, 1, 'Small', 0),
+  (2, 1, 'Small', 0),
+  (3, 1, 'Small', 1),
+  (4, 1, 'Small', 0),
+  (5, 1, 'Small', 1),
+  (6, 1, 'Medium', 1),
+  (7, 1, 'Medium', 0),
+  (8, 1, 'Medium', 1),
+  (9, 1, 'Medium', 0),
+  (10, 1, 'Medium', 1),
+  (11, 1, 'Large', 1),
+  (12, 1, 'Large', 1),
+  (13, 1, 'Large', 1),
+  (14, 1, 'Large', 1),
+  (15, 1, 'Large', 1),
+  (16, 2, 'Small', 1),
+  (17, 2, 'Small', 0),
+  (18, 2, 'Small', 1),
+  (19, 2, 'Small', 0),
+  (20, 2, 'Small', 1),
+  (21, 2, 'Medium', 1),
+  (22, 2, 'Medium', 0),
+  (23, 2, 'Medium', 1),
+  (24, 2, 'Medium', 0),
+  (25, 2, 'Medium', 1),
+  (26, 2, 'Large', 1),
+  (27, 2, 'Large', 1),
+  (28, 2, 'Large', 1),
+  (29, 2, 'Large', 1),
+  (30, 2, 'Large', 1),
+  (31, 3, 'Small', 1),
+  (32, 3, 'Small', 0),
+  (33, 3, 'Small', 1),
+  (34, 3, 'Small', 0),
+  (35, 3, 'Small', 1),
+  (36, 3, 'Medium', 1),
+  (37, 3, 'Medium', 0);
+
+----x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-xx-x-x-x-x-x-x----
+
+CREATE TABLE parking_records (
+  s_no int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  entry_time datetime NOT NULL,
+  leaving_time datetime NULL,
+  car_no varchar(20) NOT NULL,
+  slot_no int NOT NULL,
+  bill_generated int NULL
+) 
